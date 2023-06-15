@@ -9,10 +9,10 @@ include: "/views_alehop_ads/**/*.view"
 explore: smartieorders {
   group_label: "Smartie"
   label: "Orders"
-  ##
-  #join: smartieorderlines {
-  #  type: left_outer
-  #  relationship: many_to_one
-  #  sql_on: ${smartieorderlines.id} = d;;
-  #}
+
+  join: smartieorderlines {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${smartieorderlines.order_id} = ${smartieorderlines.id};;
+  }
 }
