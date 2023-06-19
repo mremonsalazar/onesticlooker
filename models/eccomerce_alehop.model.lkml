@@ -6,13 +6,13 @@ include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 
 
-explore: smartieorders {
+explore: smartieorderlines {
   group_label: "Smartie"
   label: "Orders"
 
-  join: smartieorderlines {
+  join: smartieorders {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${smartieorderlines.order_id} = ${smartieorderlines.id};;
+    sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
   }
 }
