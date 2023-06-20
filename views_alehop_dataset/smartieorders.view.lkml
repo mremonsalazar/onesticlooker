@@ -257,7 +257,7 @@ view: smartieorders {
   }
 
   measure: test {
-    type: average
+    type: sum
     sql: ${shipping_with_tax} ;;
   }
 }
