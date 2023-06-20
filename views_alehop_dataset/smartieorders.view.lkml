@@ -249,7 +249,6 @@ view: smartieorders {
     drill_fields: []
   }
 
-
   measure: purchace_frequency {
     label: "Frecuencia de compra"
     description: "[Smartie] Frecuencia de compra"
