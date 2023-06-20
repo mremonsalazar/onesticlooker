@@ -255,4 +255,9 @@ view: smartieorders {
     type: number
     sql: ${count}/distinct(${customer_email}) ;;
   }
+
+  measure: test {
+    type: count_distinct
+    sql: ${id} ;;
+  }
 }
