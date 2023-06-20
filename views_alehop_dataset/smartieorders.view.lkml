@@ -258,7 +258,7 @@ view: smartieorders {
 
   measure: test {
     type: count_distinct
-    sql: ${id} ;;
+    sql: ${billing_address_country} ;;
   }
 
   measure: average_shipping_price2 {
