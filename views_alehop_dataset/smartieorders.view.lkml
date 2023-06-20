@@ -225,6 +225,14 @@ view: smartieorders {
     sql: ${shipping_price} ;;
   }
 
+  measure: average_without_tax {
+    label: "Media Tax"
+    description: "[Alehop Dashboard] Valor medio del pedido"
+    type: average
+    sql: ${total_without_tax} ;;
+    value_format_name: eur
+  }
+
   measure: total_tax {
     type: sum
     sql: ${tax} ;;
@@ -241,13 +249,6 @@ view: smartieorders {
     drill_fields: []
   }
 
-  measure: average_without_tax {
-    label: "Media Tax"
-    description: "[Alehop Dashboard] Valor medio del pedido"
-    type: average
-    sql: ${total_without_tax} ;;
-    value_format_name: eur
-  }
 
   measure: purchace_frequency {
     label: "Frecuencia de compra"
