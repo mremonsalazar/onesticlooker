@@ -260,4 +260,9 @@ view: smartieorders {
     type: count_distinct
     sql: ${id} ;;
   }
+
+  measure: average_shipping_price2 {
+    type: average
+    sql: ${shipping_price} ;;
+  }
 }
