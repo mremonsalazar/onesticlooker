@@ -2,7 +2,7 @@
 view: smartieorders {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `alehop_dataset.smartie-orders`
+  sql_table_name: `alehop_dataset.smartie_orders`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -257,12 +257,7 @@ view: smartieorders {
   }
 
   measure: test {
-    type: count_distinct
-    sql: ${billing_address_country} ;;
-  }
-
-  measure: average_shipping_price2 {
     type: average
-    sql: ${shipping_price} ;;
+    sql: ${billing_address_country} ;;
   }
 }
