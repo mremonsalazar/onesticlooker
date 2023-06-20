@@ -2,7 +2,7 @@
 view: smartieorders {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `alehop_dataset.smartie_orders`
+  sql_table_name: `alehop_dataset.smartie-orders`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -231,14 +231,6 @@ view: smartieorders {
     value_format_name: eur
   }
 
-  measure: average_tax {
-    label: "Media Tax"
-    description: "Este métrica calcula la media de Tax"
-    type: average
-    sql: ${tax} ;;
-    value_format_name: eur
-  }
-
   measure: average_shipping_price {
     type: average
     sql: ${shipping_price} ;;
@@ -247,5 +239,20 @@ view: smartieorders {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: average_without_tax {
+    label: "Media Tax"
+    description: "[Alehop Dashboard] Valor medio del pedido"
+    type: average
+    sql: ${total_without_tax} ;;
+    value_format_name: eur
+  }
+
+  measure: purchace_frequency {
+    label: "Frecuencia de compra"
+    description: "[Smartie] Frecuencia de compra"
+    type: number
+    sql: ${count}/distinct(${customer_email}) ;;
   }
 }
