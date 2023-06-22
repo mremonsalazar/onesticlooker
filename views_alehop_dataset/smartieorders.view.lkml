@@ -256,7 +256,7 @@ view: smartieorders {
     sql: ${count}/distinct(${customer_email}) ;;
   }
 
-  measure: test {
+  measure: test1 {
     type: sum
     sql: ${shipping_with_tax} ;;
   }
