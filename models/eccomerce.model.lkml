@@ -16,3 +16,4 @@ explore: smartieorderlines {
     sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
   }
 }
+explore: smartieorders {}

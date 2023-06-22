@@ -34,6 +34,7 @@ view: smartieorderlines {
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
+    primary_key: yes
   }
 
   dimension: name {
