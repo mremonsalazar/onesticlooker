@@ -255,4 +255,8 @@ view: smartieorders {
     sql: ${total_without_tax} ;;
   }
 
+  measure: avg_without_tax {
+    type: average
+    sql: ${total_without_tax} ;;
+  }
 }
