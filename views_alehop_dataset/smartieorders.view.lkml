@@ -250,15 +250,9 @@ view: smartieorders {
     drill_fields: []
   }
 
-  measure: purchace_frequency {
-    label: "Frecuencia de compra"
-    description: "[Smartie] Frecuencia de compra"
-    type: number
-    sql: ${count}/distinct(${customer_email}) ;;
-  }
-
-  measure: Sum_without_tax {
+  measure: sum_without_tax {
     type: sum
     sql: ${total_without_tax} ;;
   }
+
 }
