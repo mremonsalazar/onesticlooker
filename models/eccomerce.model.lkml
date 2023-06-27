@@ -18,4 +18,3 @@ explore: smartieorderlines {
   }
 }
 explore: smartieorders {}
-# explore: events_20230625 {}
