@@ -4,6 +4,7 @@ connection: "bigquery_cdp"
 # include all the views
 include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
+include: "/views_alehop_analytics/**/*.view"
 
 
 explore: smartieorderlines {
@@ -17,3 +18,4 @@ explore: smartieorderlines {
   }
 }
 explore: smartieorders {}
+# explore: events_20230625 {}
