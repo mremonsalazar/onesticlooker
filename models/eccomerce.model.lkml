@@ -5,6 +5,7 @@ connection: "bigquery_cdp"
 include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 include: "/views_alehop_analytics/**/*.view"
+include: "/medidas/**/*.view"
 
 
 explore: smartieorderlines {
@@ -18,6 +19,7 @@ explore: smartieorderlines {
   }
 }
 explore: smartieorders {}
+explore: sum_without_tax_por_paises {}
 explore: analytics_1  {
   from: events_20230625
   }
