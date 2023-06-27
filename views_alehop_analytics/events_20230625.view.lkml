@@ -25,7 +25,7 @@ explore: events_20230625 {
 view: events_20230625 {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `gke-for-ops.analytics_353816733.events_20230625`
+  sql_table_name: `gke-for-ops.analytics_353816733.events_*`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
