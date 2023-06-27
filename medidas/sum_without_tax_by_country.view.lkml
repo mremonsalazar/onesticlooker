@@ -33,4 +33,9 @@ view: sum_without_tax_por_paises {
   set: detail {
     fields: [smartieorders_billing_address_country, smartieorders_sum_without_tax]
   }
+
+  measure: avg {
+    type: average
+    sql: ${smartieorders_sum_without_tax} ;;
+  }
 }
