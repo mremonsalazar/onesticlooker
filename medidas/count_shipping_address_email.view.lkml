@@ -36,6 +36,6 @@ view: count_shipping_address_email {
 
   measure: avg {
     type: average
-    sql: ${smartieorders_shipping_address_email} ;;
+    sql: ${smartieorders_count} ;;
   }
 }
