@@ -20,6 +20,7 @@ explore: smartieorderlines {
 }
 explore: smartieorders {}
 explore: pyg_advertising_investment {}
+explore: sum_without_tax_by_month {}
 explore: sum_without_tax_por_paises {}
 explore: analytics_1  {
   from: events_20230625

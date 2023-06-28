@@ -38,4 +38,9 @@ view: sum_without_tax_por_paises {
     type: average
     sql: ${smartieorders_sum_without_tax} ;;
   }
+
+#  measure: with_gross_margin {
+#    type:  number
+#    sql:  ${smartieorders_sum_without_tax}*gross_margin ;;
+#  }
 }
