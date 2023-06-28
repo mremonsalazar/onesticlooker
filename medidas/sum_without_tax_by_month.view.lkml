@@ -37,4 +37,9 @@ view: sum_without_tax_by_month {
   set: detail {
     fields: [smartieorders_created_date, smartieorders_sum_without_tax]
   }
+
+  measure: avg {
+    type: average
+    sql: ${smartieorders_sum_without_tax} ;;
+  }
 }
