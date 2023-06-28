@@ -2,6 +2,9 @@ view: sum_quantity_orderlines {
   derived_table: {
     sql: SELECT
           smartieorderlines.order_id  AS smartieorderlines_order_id,
+          smartieorderlines.origin  AS smartieorderlines_origin,
+          smartieorderlines.country  AS smartieorderlines_country,
+          smartieorderlines.created_at  AS smartieorderlines_created_at,
           COALESCE(SUM(smartieorderlines.quantity ), 0) AS smartieorderlines_sum_quantity
       FROM `alehop_dataset.smartie_order_lines`
            AS smartieorderlines
