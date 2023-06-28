@@ -135,4 +135,9 @@ view: smartieorderlines {
     type: count
     drill_fields: [name]
   }
+
+  measure: sum_quantity {
+    type: sum
+    sql: ${quantity} ;;
+  }
 }
