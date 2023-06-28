@@ -21,6 +21,7 @@ explore: smartieorderlines {
 explore: smartieorders {}
 explore: pyg_advertising_investment {}
 explore: count_shipping_address_email {}
+explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_month {}
 explore: sum_without_tax_por_paises {}
 explore: analytics_1  {
