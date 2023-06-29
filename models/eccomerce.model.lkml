@@ -30,4 +30,4 @@ explore: pyg_advertising_investment {}
 explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
-explore: test {}
+explore: query1 {}

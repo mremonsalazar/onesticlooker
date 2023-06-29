@@ -1,7 +1,7 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
 
 
-view: test {
+view: query1 {
   derived_table: {
     sql: WITH PurchaseData AS (
           SELECT `alehop_dataset.smartie_orders`.`shipping_address_email`, COUNT(*) AS num_purchases
