@@ -32,3 +32,4 @@ explore: count_shipping_address_email {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: sum_without_tax_por_paises {}
+#explore: mas_stock_poco_visto {}
