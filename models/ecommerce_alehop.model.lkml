@@ -4,7 +4,6 @@ connection: "bigquery_cdp"
 # include all the views
 include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
-include: "/views_alehop_analytics/**/*.view"
 include: "/medidas/**/*.view"
 
 
@@ -24,6 +23,3 @@ explore: count_shipping_address_email {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_month {}
 explore: sum_without_tax_por_paises {}
-explore: analytics_1  {
-  from: events_20230625
-  }
