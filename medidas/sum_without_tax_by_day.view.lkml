@@ -1,4 +1,4 @@
-view: sum_without_tax_by_month {
+view: sum_without_tax_by_day {
   derived_table: {
     sql: -- raw sql results do not include filled-in values for 'smartieorders.created_date'
 
