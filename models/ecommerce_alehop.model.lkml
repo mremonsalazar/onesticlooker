@@ -18,10 +18,9 @@ explore: smartieorderlines {
   }
 }
 
-#explore: pygsalestarget {
-#  group_label: "Ventas/Objetivo"
-#  label: "Without Tax and PyG"
-#  join: sum_without_tax_by_month {
+#explore: sum_without_tax_by_day {
+#  join: pygsalestarget {
+#    sql_on: 1 = 1 ;;
 #    type: cross
 #  }
 #}
