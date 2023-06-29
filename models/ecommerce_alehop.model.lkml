@@ -18,6 +18,14 @@ explore: smartieorderlines {
   }
 }
 
+#explore: pygsalestarget {
+#  group_label: "Ventas/Objetivo"
+#  label: "Without Tax and PyG"
+#  join: sum_without_tax_by_month {
+#    type: cross
+#  }
+#}
+
 explore: smartieorders {}
 explore: pyg_advertising_investment {}
 explore: pygsalestarget {}
