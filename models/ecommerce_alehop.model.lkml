@@ -17,8 +17,10 @@ explore: smartieorderlines {
     sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
   }
 }
+
 explore: smartieorders {}
 explore: pyg_advertising_investment {}
+explore: pygsalestarget {}
 explore: count_shipping_address_email {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_month {}
