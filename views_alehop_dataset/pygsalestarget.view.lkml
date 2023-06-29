@@ -47,6 +47,7 @@ view: pygsalestarget {
 
   measure: salestarget30 {
     type: number
-    sql: ${sales_target}/30;;
+    sql: ${sales_target}/DATE_DIFF(DATE_ADD(DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH), INTERVAL 1 MONTH),
+                DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH), DAY);;
   }
 }
