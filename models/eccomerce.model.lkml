@@ -33,8 +33,6 @@ explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
-explore: query1 {}
-explore: query2 {}
 explore: events {
   hidden: no
   join: events_items {
