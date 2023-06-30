@@ -5,6 +5,7 @@ connection: "bigquery_cdp"
 include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 include: "/medidas/**/*.view"
+include: "/views/*.view"
 
 
 explore: smartieorderlines {
@@ -33,3 +34,21 @@ explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
 explore: query1 {}
 explore: query2 {}
+explore: events_20230523 {
+  hidden: no
+  join: events_20230523__items {
+    view_label: "Events 20230523: Items"
+    sql: LEFT JOIN UNNEST(${events_20230523.items}) as events_20230523__items ;;
+    relationship: one_to_many
+  }
+  join: events_20230523__event_params {
+    view_label: "Events 20230523: Event Params"
+    sql: LEFT JOIN UNNEST(${events_20230523.event_params}) as events_20230523__event_params ;;
+    relationship: one_to_many
+  }
+  join: events_20230523__user_properties {
+    view_label: "Events 20230523: User Properties"
+    sql: LEFT JOIN UNNEST(${events_20230523.user_properties}) as events_20230523__user_properties ;;
+    relationship: one_to_many
+  }
+}
