@@ -679,6 +679,11 @@ view: events_20230523__items {
     type: number
     sql: quantity ;;
   }
+
+  measure: count {
+    type: count
+    drill_fields: []
+  }
 }
 
 # The name of this view in Looker is "Events 20230523 Event Params"
