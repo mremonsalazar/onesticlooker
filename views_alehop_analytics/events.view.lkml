@@ -691,7 +691,7 @@ view: events_items {
   }
 }
 
-# The name of this view in Looker is "Events 20230523 Event Params"
+# The name of this view in Looker is "Events Event Params"
 view: events_event_params {
 
   # No primary key is defined for this view. In order to join this view in an Explore,
@@ -700,7 +700,7 @@ view: events_event_params {
   # This field is hidden, which means it will not show up in Explore.
   # If you want this field to be displayed, remove "hidden: yes".
 
-  dimension: events_20230523__event_params {
+  dimension: events_event_params {
     type: string
     hidden: yes
     sql: events_event_params ;;
@@ -752,9 +752,14 @@ view: events_event_params {
     group_label: "Value"
     group_item_label: "String Value"
   }
+
+  measure: count_strvalue {
+    type: count_distinct
+    sql: ${value__string_value} ;;
+  }
 }
 
-# The name of this view in Looker is "Events 20230523 User Properties"
+# The name of this view in Looker is "Events User Properties"
 view: events_user_properties {
 
   # No primary key is defined for this view. In order to join this view in an Explore,
@@ -763,10 +768,10 @@ view: events_user_properties {
   # This field is hidden, which means it will not show up in Explore.
   # If you want this field to be displayed, remove "hidden: yes".
 
-  dimension: events_20230523__user_properties {
+  dimension: events_user_properties {
     type: string
     hidden: yes
-    sql: events_20230523__user_properties ;;
+    sql: events_user_properties ;;
   }
     # Here's what a typical dimension looks like in LookML.
     # A dimension is a groupable field that can be used to filter query results.
