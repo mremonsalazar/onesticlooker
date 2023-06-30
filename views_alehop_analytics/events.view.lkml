@@ -504,6 +504,11 @@ view: events {
     drill_fields: [detail*]
   }
 
+  measure: count_user {
+    type: count_distinct
+    sql: ${user_pseudo_id} ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
