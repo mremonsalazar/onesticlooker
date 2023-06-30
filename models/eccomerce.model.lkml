@@ -6,6 +6,8 @@ include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 include: "/medidas/**/*.view"
 include: "/views_alehop_analytics/*.view"
+include: "/prod_mas_stock_pocas_views/*.view"
+include: "/alehop_merchant_center/*.view"
 
 
 explore: smartieorderlines {
@@ -49,5 +51,25 @@ explore: events {
     view_label: "Events: User Properties"
     sql: LEFT JOIN UNNEST(${events.user_properties}) as events_user_properties ;;
     relationship: one_to_many
+  }
+}
+
+
+
+
+explore: productvisibility {
+  group_label: "Prod más stock pocas views"
+  label: "Products SKU"
+
+  join: productstocks {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${productstocks.smartie_stocks_product_sku}.id} = ${productvisibility.events_items_item_id};;
+  }
+
+  join: products_670518068 {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${products_670518068.offer_id} = ${productstocks.smartie_stocks_product_sku} ;;
   }
 }

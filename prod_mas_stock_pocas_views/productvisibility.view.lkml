@@ -1,7 +1,7 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
 
 
-view: count_item_id {
+view: productvisibility {
   derived_table: {
     sql: SELECT
           item_id  AS events_items_item_id,
@@ -34,7 +34,7 @@ view: count_item_id {
   set: detail {
     fields: [
         events_items_item_id,
-	events_items_count
+  events_items_count
     ]
   }
 }
