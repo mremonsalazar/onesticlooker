@@ -1,7 +1,7 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
 
 # The name of this view in Looker is "Events 20230523"
-view: events_20230523 {
+view: events {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
   sql_table_name: `gke-for-ops.analytics_353816733.events_*` ;;
