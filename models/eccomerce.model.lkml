@@ -30,5 +30,6 @@ explore: pyg_advertising_investment {}
 explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
+explore: count_shipping_address_email {}
 explore: query1 {}
 explore: query2 {}
