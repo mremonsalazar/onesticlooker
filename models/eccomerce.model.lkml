@@ -67,9 +67,5 @@ explore: productvisibility {
     sql_on: ${productstocks.smartie_stocks_product_sku}.id} = ${productvisibility.events_items_item_id};;
   }
 
-  join: products_670518068 {
-    type: left_outer
-    relationship: many_to_one
-    sql_on: ${products_670518068.offer_id} = ${productstocks.smartie_stocks_product_sku} ;;
-  }
+
 }
