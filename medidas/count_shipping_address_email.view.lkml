@@ -42,8 +42,13 @@ view: count_shipping_address_email {
   set: detail {
     fields: [
         smartieorders_created_month,
-	smartieorders_shipping_address_email,
-	smartieorders_count
+  smartieorders_shipping_address_email,
+  smartieorders_count
     ]
+  }
+
+  measure: avg {
+    type: average
+    sql: ${smartieorders_count} ;;
   }
 }
