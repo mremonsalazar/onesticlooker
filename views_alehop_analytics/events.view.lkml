@@ -1,6 +1,6 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
 
-# The name of this view in Looker is "Events 20230523"
+# The name of this view in Looker is "Events"
 view: events {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
@@ -520,8 +520,8 @@ view: events {
 
 }
 
-# The name of this view in Looker is "Events 20230523 Items"
-view: events_20230523__items {
+# The name of this view in Looker is "Events Items"
+view: events_items {
   drill_fields: [item_id]
 
   # This primary key is the unique key for this table in the underlying database.
@@ -558,10 +558,10 @@ view: events_20230523__items {
   # This field is hidden, which means it will not show up in Explore.
   # If you want this field to be displayed, remove "hidden: yes".
 
-  dimension: events_20230523__items {
+  dimension: events_items {
     type: string
     hidden: yes
-    sql: events_20230523__items ;;
+    sql: events_items ;;
   }
 
   dimension: item_brand {
@@ -687,7 +687,7 @@ view: events_20230523__items {
 }
 
 # The name of this view in Looker is "Events 20230523 Event Params"
-view: events_20230523__event_params {
+view: events_event_params {
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -698,7 +698,7 @@ view: events_20230523__event_params {
   dimension: events_20230523__event_params {
     type: string
     hidden: yes
-    sql: events_20230523__event_params ;;
+    sql: events_event_params ;;
   }
     # Here's what a typical dimension looks like in LookML.
     # A dimension is a groupable field that can be used to filter query results.
@@ -750,7 +750,7 @@ view: events_20230523__event_params {
 }
 
 # The name of this view in Looker is "Events 20230523 User Properties"
-view: events_20230523__user_properties {
+view: events_user_properties {
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.

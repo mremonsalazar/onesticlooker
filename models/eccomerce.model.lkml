@@ -36,17 +36,17 @@ explore: query1 {}
 explore: query2 {}
 explore: events {
   hidden: no
-  join: events_20230523__items {
+  join: events_items {
     view_label: "Events: Items"
     sql: LEFT JOIN UNNEST(${events.items}) as events_items ;;
     relationship: one_to_many
   }
-  join: events_20230523__event_params {
+  join: events_event_params {
     view_label: "Events: Event Params"
     sql: LEFT JOIN UNNEST(${events.event_params}) as events_event_params ;;
     relationship: one_to_many
   }
-  join: events_20230523__user_properties {
+  join: events_user_properties {
     view_label: "Events: User Properties"
     sql: LEFT JOIN UNNEST(${events.user_properties}) as events_user_properties ;;
     relationship: one_to_many
