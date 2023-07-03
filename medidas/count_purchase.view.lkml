@@ -36,4 +36,5 @@ view: count_purchase {
   count_purchase
     ]
   }
+
 }
