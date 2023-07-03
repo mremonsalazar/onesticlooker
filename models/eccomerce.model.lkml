@@ -75,7 +75,7 @@ explore: productvisibility {
 }
 
 explore: count_purchase {
-  label: "counts purchase session start"
+  label: "Counts purchase session start"
   join: count_session_start {
     type: left_outer
     relationship: one_to_one
