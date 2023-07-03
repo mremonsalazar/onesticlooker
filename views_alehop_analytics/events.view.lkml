@@ -757,6 +757,11 @@ view: events_event_params {
     type: count_distinct
     sql: ${value__string_value} ;;
   }
+
+  measure: count {
+    type: count
+    drill_fields: []
+  }
 }
 
 # The name of this view in Looker is "Events User Properties"
