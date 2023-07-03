@@ -509,6 +509,16 @@ view: events {
     sql: ${user_pseudo_id} ;;
   }
 
+  measure: count_purchase {
+    type: count_distinct
+    sql: ${event_name} =  "purchase";;
+  }
+
+  measure: count_session_start {
+    type: count_distinct
+    sql: ${event_name} =  "session_start";;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
