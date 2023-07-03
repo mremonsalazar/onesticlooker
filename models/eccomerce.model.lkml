@@ -10,17 +10,6 @@ include: "/prod_mas_stock_pocas_views/*.view"
 include: "/alehop_merchant_center/*.view"
 
 
-explore: smartieorderlines {
-  group_label: "Smartie"
-  label: "Orders"
-
-  join: smartieorders {
-    type: left_outer
-    relationship: many_to_one
-    sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
-  }
-}
-
 #explore: sum_without_tax_by_day {
 #  join: pygsalestarget {
 #    sql_on: 1 = 1 ;;
@@ -35,6 +24,9 @@ explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
+
+
+
 explore: events {
   hidden: no
   join: events_items {
@@ -53,9 +45,6 @@ explore: events {
     relationship: one_to_many
   }
 }
-
-
-
 
 explore: productvisibility {
   group_label: "Prod más stock pocas views"
@@ -82,4 +71,15 @@ explore: count_purchase {
     sql_on: ${count_purchase.event_date}=${count_session_start.event_date};;
   }
 
+}
+
+explore: smartieorderlines {
+  group_label: "Smartie"
+  label: "Orders"
+
+  join: smartieorders {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
+  }
 }
