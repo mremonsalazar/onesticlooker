@@ -27,7 +27,7 @@ view: count_purchase {
 
   dimension: count_purchase {
     type: number
-    sql: ${TABLE}.events_count ;;
+    sql: ${TABLE}.count_purchase ;;
   }
 
   set: detail {
