@@ -73,3 +73,12 @@ explore: productvisibility {
     sql_on: ${products_670518068.offer_id} = ${productstocks.smartie_stocks_product_sku} ;;
   }
 }
+
+explore: count_purchase {
+  label: "counts purchase session start"
+  join: count_session_start {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${count_purchase.event_date}=${count_session_start.event_date};;
+  }
+}
