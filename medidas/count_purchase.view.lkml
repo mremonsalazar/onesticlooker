@@ -22,7 +22,7 @@ view: count_purchase {
 
   dimension: event_date {
     type: string
-    sql: ${TABLE}.events_event_date ;;
+    sql: ${TABLE}.event_date ;;
   }
 
   dimension: count_purchase {
