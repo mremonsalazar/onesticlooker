@@ -29,9 +29,19 @@ view: count_purchase {
     drill_fields: [detail*]
   }
 
+  measure: multipl {
+    type: number
+    sql: ${count_purchase}*${count_session_start} ;;
+  }
+
   dimension: event_date {
     type: string
     sql: ${TABLE}.event_date ;;
+  }
+
+  dimension: count_session_start {
+    type: number
+    sql: ${TABLE}.count_session_start ;;
   }
 
   dimension: count_purchase {
