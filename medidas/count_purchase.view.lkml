@@ -1,5 +1,14 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
 
+include: "/medidas/**/count_session_start.view"
+explore: count_purchase {
+  label: "Counts purchase session start"
+  join: count_session_start {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${count_purchase.event_date}=${count_session_start.event_date};;
+  }
+}
 
 view: count_purchase {
   derived_table: {

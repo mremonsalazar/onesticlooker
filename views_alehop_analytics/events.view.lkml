@@ -324,8 +324,16 @@ view: events {
   }
 
   dimension: event_date {
-    type: string
-    sql: ${TABLE}.event_date ;;
+    hidden: yes
+    type: date
+    sql: PARSE_DATE('%Y%m%d', ${TABLE}.event_date) ;;
+  }
+
+  dimension_group: events {
+    type: time
+    timeframes: [time, date, week, month, month_num,quarter, year, raw]
+    datatype: date
+    sql: ${event_date} ;;
   }
 
   dimension: event_dimensions__hostname {
