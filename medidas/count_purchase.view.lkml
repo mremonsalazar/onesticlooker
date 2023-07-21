@@ -29,7 +29,7 @@ view: count_purchase {
     drill_fields: [detail*]
   }
 
-  measure: multipl {
+  measure: multiplicacion {
     type: number
     sql: ${count_purchase}*${count_session_start} ;;
   }
