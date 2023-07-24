@@ -6,7 +6,7 @@ explore: count_purchase {
   join: count_session_start {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${count_purchase.event_date}=${count_session_start.event_date};;
+    sql_on: ${count_purchase.event_date}=${count_session_start.event_date} &#59;&#59;;
   }
 }
 
