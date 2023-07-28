@@ -31,7 +31,7 @@ view: count_session_start {
   set: detail {
     fields: [
         event_date,
-	count_session_start
+  count_session_start
     ]
   }
 }
