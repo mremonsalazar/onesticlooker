@@ -6,7 +6,7 @@ connection: "bigquery_cdp"
 include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 include: "/medidas/**/*.view"
-#include: "/views_alehop_analytics/*.view"
+include: "/views_alehop_analytics/*.view"
 include: "/alehop_merchant_center/*.view"
 
 
@@ -45,8 +45,6 @@ explore: events {
     relationship: one_to_many
   }
 }
-
-
 
 explore: smartieorderlines {
   group_label: "Smartie"
