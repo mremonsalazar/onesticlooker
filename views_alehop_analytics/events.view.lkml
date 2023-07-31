@@ -323,7 +323,7 @@ view: events {
     sql: ${TABLE}.event_bundle_sequence_id ;;
   }
 
-  dimension: events_date {
+  dimension: event_date {
     hidden: yes
     type: date
     sql: PARSE_DATE('%Y%m%d', ${TABLE}.event_date) ;;
@@ -333,7 +333,7 @@ view: events {
     type: time
     timeframes: [time, date, week, month, month_num,quarter, year, raw]
     datatype: date
-    sql: ${events_date} ;;
+    sql: ${event_date} ;;
   }
 
   dimension: event_dimensions__hostname {
