@@ -1,11 +1,12 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
 
 
+
 view: productstocks {
   derived_table: {
     sql: SELECT
-          smartie_stocks.product_sku  AS smartie_stocks_product_sku,
-          smartie_stocks.quantity  AS smartie_stocks_quantity
+          smartie_stocks.product_sku  AS product_sku,
+          smartie_stocks.quantity  AS quantity
       FROM `gke-for-ops.alehop_dataset.smartie_stocks`  AS smartie_stocks
       WHERE (smartie_stocks.quantity ) > 0
       GROUP BY
@@ -21,20 +22,20 @@ view: productstocks {
     drill_fields: [detail*]
   }
 
-  dimension: smartie_stocks_product_sku {
+  dimension: product_sku {
     type: string
     sql: ${TABLE}.smartie_stocks_product_sku ;;
   }
 
-  dimension: smartie_stocks_quantity {
+  dimension: quantity {
     type: number
     sql: ${TABLE}.smartie_stocks_quantity ;;
   }
 
   set: detail {
     fields: [
-        smartie_stocks_product_sku,
-	smartie_stocks_quantity
+        product_sku,
+  quantity
     ]
   }
 }

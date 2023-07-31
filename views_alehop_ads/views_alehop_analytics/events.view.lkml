@@ -329,7 +329,7 @@ view: events {
     sql: PARSE_DATE('%Y%m%d', ${TABLE}.event_date) ;;
   }
 
-  dimension_group: events {
+  dimension_group: event_date_group {
     type: time
     timeframes: [time, date, week, month, month_num,quarter, year, raw]
     datatype: date

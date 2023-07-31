@@ -1,4 +1,6 @@
 # Un-hide and use this explore, or copy the joins into another explore, to get all the fully nested relationships from this view
+
+
 explore: products_670518068 {
   hidden: yes
     join: products_670518068__issues {

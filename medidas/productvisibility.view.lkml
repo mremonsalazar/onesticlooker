@@ -1,6 +1,7 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
 
 
+
 view: productvisibility {
   derived_table: {
     sql: SELECT
@@ -16,25 +17,25 @@ view: productvisibility {
       LIMIT 5000 ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
-  dimension: events_items_item_id {
+  dimension: product_sku {
     type: string
     sql: ${TABLE}.events_items_item_id ;;
   }
 
-  dimension: events_items_count {
+  dimension: count {
     type: number
     sql: ${TABLE}.events_items_count ;;
   }
 
   set: detail {
     fields: [
-        events_items_item_id,
-	events_items_count
+        product_sku,
+  count
     ]
+  }
+
+  measure: ratio {
+    type: number
+    sql: ${count}/${productstocks.quantity} ;;
   }
 }

@@ -40,6 +40,12 @@ view: pygsalestarget {
     sql: ${TABLE}.year ;;
   }
 
+  dimension: date {
+    hidden: no
+    type: date
+    sql: FORMAT_DATE('%Y-%m', ${TABLE}.year, ${TABLE}.month) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
@@ -47,7 +53,7 @@ view: pygsalestarget {
 
   measure: salestarget30 {
     type: number
-    sql: ${sales_target}/DATE_DIFF(DATE_ADD(DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH), INTERVAL 1 MONTH),
-                DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH), DAY);;
+    sql: ${sales_target}/30;;
   }
+
 }
