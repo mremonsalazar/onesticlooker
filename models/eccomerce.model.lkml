@@ -25,6 +25,7 @@ explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
 explore: first_visits {}
+explore: allcustomers {}
 
 
 explore: events {
