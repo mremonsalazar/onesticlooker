@@ -25,7 +25,6 @@ explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
 explore: first_visits {}
-explore: allcustomers {}
 
 
 explore: events {
@@ -55,5 +54,16 @@ explore: smartieorderlines {
     type: left_outer
     relationship: many_to_one
     sql_on: ${smartieorders.id} = ${smartieorderlines.order_id};;
+  }
+}
+
+explore: allcustomers {
+  group_label: "tasa cancelacion"
+  label: "customer and purchases"
+
+  join: recentpurchases {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${allcustomers.events_user_pseudo_id} = ${recentpurchases.events_user_pseudo_id};;
   }
 }
