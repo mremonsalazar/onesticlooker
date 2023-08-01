@@ -58,8 +58,8 @@ explore: smartieorderlines {
 }
 
 explore: allcustomers {
-  group_label: "tasa cancelacion"
-  label: "customer and purchases"
+  group_label: "Tasa cancelacion"
+  label: "Customers and purchases"
 
   join: recentpurchases {
     type: left_outer
