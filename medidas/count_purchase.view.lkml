@@ -28,8 +28,16 @@ view: count_purchase {
   }
 
   dimension: event_date {
-    type: string
-    sql: ${TABLE}.event_date ;;
+    hidden: no
+    type: date
+    sql: PARSE_DATE('%Y%m%d', ${TABLE}.event_date) ;;
+  }
+
+  dimension_group: event_date_group {
+    type: time
+    timeframes: [time, date, week, month, month_num,quarter, year, raw]
+    datatype: date
+    sql: ${event_date} ;;
   }
 
   dimension: count_session_start {
@@ -45,6 +53,11 @@ view: count_purchase {
   measure: multiplicacion {
     type: number
     sql: ${count_session_start}*${count_purchase} ;;
+  }
+
+  measure: conversion_rate {
+    type: number
+    sql: (${count_purchase}*100)/${count_session_start} ;;
   }
 
   set: detail {
