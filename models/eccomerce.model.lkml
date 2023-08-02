@@ -28,6 +28,7 @@ explore: first_visits {}
 explore: conversion_rate {}
 explore: coste_ventas {}
 explore: gross_margin {}
+explore: cart_abandonment_rate {}
 
 
 explore: events {
