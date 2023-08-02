@@ -27,6 +27,7 @@ explore: count_shipping_address_email {}
 explore: first_visits {}
 explore: conversion_rate {}
 explore: coste_ventas {}
+explore: gross_margin {}
 
 
 explore: events {
