@@ -28,7 +28,7 @@ view: count_purchase {
   }
 
   dimension: event_date {
-    hidden: no
+    hidden: yes
     type: date
     sql: PARSE_DATE('%Y%m%d', ${TABLE}.event_date) ;;
   }

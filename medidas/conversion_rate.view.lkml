@@ -42,8 +42,16 @@ view: conversion_rate {
   }
 
   dimension: event_date {
-    type: string
-    sql: ${TABLE}.count_purchase_event_date ;;
+    hidden: yes
+    type: date
+    sql: PARSE_DATE('%Y%m%d', ${TABLE}.count_purchase_event_date) ;;
+  }
+
+  dimension_group: event_date_group {
+    type: time
+    timeframes: [time, date, week, month, month_num,quarter, year, raw]
+    datatype: date
+    sql: ${event_date} ;;
   }
 
   dimension: count_purchase {

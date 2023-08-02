@@ -7,7 +7,7 @@ include: "/views_alehop_dataset/**/*.view"
 include: "/views_alehop_ads/**/*.view"
 include: "/medidas/**/*.view"
 include: "/views_alehop_analytics/*.view"
-include: "/alehop_merchant_center/*.view"
+include: "/alehop_merchant_center/**/products_670518068.view"
 
 
 #explore: sum_without_tax_by_day {
@@ -25,6 +25,7 @@ explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
 explore: first_visits {}
+explore: conversion_rate {}
 
 
 explore: events {
