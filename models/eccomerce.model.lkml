@@ -26,6 +26,7 @@ explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
 explore: first_visits {}
 explore: conversion_rate {}
+explore: coste_ventas {}
 
 
 explore: events {
