@@ -1,4 +1,3 @@
-explore: all_cart_abandonment_rate {}
 # The name of this view in Looker is "All Cart Abandonment Rate"
 view: all_cart_abandonment_rate {
   # The sql_table_name parameter indicates the underlying database table

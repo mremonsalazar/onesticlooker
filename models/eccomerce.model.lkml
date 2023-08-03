@@ -33,6 +33,7 @@ explore: checkout_abandonment_rate {}
 explore: total_cart_abandonment {}
 explore: revenue_per_visit {}
 explore: cancellation_ratio {}
+explore: all_cart_abandonment_rate {}
 
 
 explore: events {
