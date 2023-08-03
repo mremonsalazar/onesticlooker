@@ -2,6 +2,7 @@
 #include: "/medidas/**/days_in_current_month.view"
 #include: "/medidas/**/monthly_sales_target.view"
 
+
 view: daily_revenue {
   derived_table: {
     sql: -- raw sql results do not include filled-in values for 'smartieorders.created_date'
