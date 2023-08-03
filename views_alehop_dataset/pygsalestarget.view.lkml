@@ -41,7 +41,7 @@ view: pygsalestarget {
   }
 
   dimension: date {
-    hidden: no
+    hidden: yes
     type: date
     sql: FORMAT_DATE('%Y-%m', ${TABLE}.year, ${TABLE}.month) ;;
   }
