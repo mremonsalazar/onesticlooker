@@ -76,6 +76,7 @@ view: smartieorders {
       date,
       week,
       month,
+      month_num,
       quarter,
       year
     ]
