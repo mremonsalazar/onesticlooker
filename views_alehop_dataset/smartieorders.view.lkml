@@ -253,7 +253,7 @@ view: smartieorders {
 
   measure: sum_without_tax {
     type: sum
-    sql: ${total_without_tax} ;;
+    sql: ROUND(${total_without_tax}, 2) ;;
   }
 
   measure: avg_without_tax {
