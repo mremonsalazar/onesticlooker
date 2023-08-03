@@ -1,5 +1,6 @@
 #X# Conversion failed: failed to parse YAML.  Check for pipes on newlines
-
+#include: "/medidas/**/days_in_current_month.view"
+#include: "/medidas/**/monthly_sales_target.view"
 
 view: daily_revenue {
   derived_table: {
@@ -37,7 +38,12 @@ view: daily_revenue {
   set: detail {
     fields: [
         smartieorders_created_date,
-	smartieorders_sum_without_tax
+  smartieorders_sum_without_tax
     ]
+  }
+
+  measure: percentage_of_target_achieved {
+    type: number
+    sql: ${smartieorders_sum_without_tax} ;;
   }
 }

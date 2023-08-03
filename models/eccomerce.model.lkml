@@ -32,7 +32,7 @@ explore: checkout_abandonment_rate {}
 explore: total_cart_abandonment {}
 explore: revenue_per_visit {}
 explore: cancellation_ratio {}
-explore: daily_revenue {}
+#explore: daily_revenue {}
 
 
 explore: events {
@@ -73,5 +73,18 @@ explore: allcustomers {
     type: left_outer
     relationship: many_to_one
     sql_on: ${allcustomers.events_user_pseudo_id} = ${recentpurchases.events_user_pseudo_id};;
+  }
+}
+
+explore: daily_revenue {
+  join: monthly_sales_target {
+    relationship: many_to_many
+    sql_on: 1 = 1 ;; # this sql_on condition is required in some dialects,
+    type: cross      # but causes problems in other dialects, try adding or
+  }                  # removing if you experience problems with cross joins
+  join: days_in_current_month {
+    relationship: many_to_many
+    sql_on: 1 = 1 ;; # this sql_on condition is required in some dialects,
+    type: cross      # but causes problems in other dialects, try adding or
   }
 }
