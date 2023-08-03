@@ -27,14 +27,12 @@ view: daily_revenue {
 
   dimension: smartieorders_created_date {
     type: date
-    datatype: date
-    hidden: yes
-    sql: PARSE_DATE('%Y%m%d', ${TABLE}.smartieorders_created_date) ;;
+    sql: ${TABLE}.smartieorders_created_date ;;
   }
 
   dimension_group: created_date_group {
     type: time
-    timeframes: [time, date, week, month, month_num,quarter, year, raw]
+    timeframes: [date, month, year]
     datatype: date
     sql: ${smartieorders_created_date} ;;
   }
