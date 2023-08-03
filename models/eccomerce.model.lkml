@@ -30,6 +30,7 @@ explore: coste_ventas {}
 explore: gross_margin {}
 explore: cart_abandonment_rate {}
 explore: checkout_abandonment_rate {}
+explore: total_cart_abandonment {}
 
 
 explore: events {
