@@ -46,7 +46,7 @@ view: pygsalestarget {
     sql: FORMAT_DATE('%Y-%m', ${TABLE}.year, ${TABLE}.month) ;;
   }
 
-  dimension_group: event_date_group {
+  dimension_group: date_group {
     type: time
     timeframes: [date, month, month_num, year]
     datatype: date
