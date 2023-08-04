@@ -1,8 +1,8 @@
-# The name of this view in Looker is "High Stock Low Visits"
-view: high_stock_low_visits {
+# The name of this view in Looker is "Alto Stock Pocas Visitas"
+view: alto_stock_pocas_visitas {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `gke-for-ops.analytics_353816733.high_stock_low_visits` ;;
+  sql_table_name: `gke-for-ops.analytics_353816733.alto_stock_pocas_visitas` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.

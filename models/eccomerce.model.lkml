@@ -34,8 +34,8 @@ explore: revenue_per_visit {}
 explore: cancellation_ratio {}
 explore: ventas_objetivo {}
 explore: not_sold_in_last_week {}
-explore: high_stock_low_visits {}
-explore: low_stock_high_visits {}
+explore: alto_stock_pocas_visitas {}
+explore: poco_stock_muchas_visitas {}
 #explore: daily_revenue {}
 
 
