@@ -13,7 +13,7 @@ view: coste_ventas {
 
   dimension: coste_ventas {
     type: number
-    sql: ${TABLE}.coste_ventas ;;
+    sql: ROUND(${TABLE}.coste_ventas, 2) ;;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
