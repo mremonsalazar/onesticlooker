@@ -33,6 +33,7 @@ explore: total_cart_abandonment {}
 explore: revenue_per_visit {}
 explore: cancellation_ratio {}
 explore: ventas_objetivo {}
+explore: not_sold_in_last_week {}
 #explore: daily_revenue {}
 
 
