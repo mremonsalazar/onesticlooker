@@ -16,7 +16,7 @@ view: not_sold_in_last_week {
     sql: ${TABLE}.product_sku ;;
   }
 
-  dimension: quantity {
+  dimension: stocks {
     type: number
     sql: ${TABLE}.quantity ;;
   }
@@ -27,12 +27,12 @@ view: not_sold_in_last_week {
 
   measure: total_quantity {
     type: sum
-    sql: ${quantity} ;;  }
+    sql: ${stocks} ;;  }
   measure: average_quantity {
     type: average
-    sql: ${quantity} ;;  }
+    sql: ${stocks} ;;  }
 
-  dimension: title {
+  dimension: producto {
     type: string
     sql: ${TABLE}.title ;;
   }
