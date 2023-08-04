@@ -37,6 +37,7 @@ explore: not_sold_in_last_week {}
 explore: alto_stock_pocas_visitas {}
 explore: poco_stock_muchas_visitas {}
 explore: sin_stock_mas_vendidos {}
+explore: top_prodcutos_unidades_no_vendidos {}
 #explore: daily_revenue {}
 
 
