@@ -83,6 +83,11 @@ view: smartieorders {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: month {
+    type: date
+    sql: ${created_month} ;;
+  }
+
   dimension: currency {
     type: string
     sql: ${TABLE}.currency ;;
