@@ -19,7 +19,7 @@ include: "/alehop_merchant_center/**/products_670518068.view"
 
 explore: smartieorders {}
 explore: smartie_stocks {}
-#explore: pyg_advertising_investment {}
+explore: pyg_advertising_investment {}
 explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
@@ -93,14 +93,5 @@ explore: daily_revenue {
     relationship: many_to_many
     sql_on: 1 = 1 ;; # this sql_on condition is required in some dialects,
     type: cross      # but causes problems in other dialects, try adding or
-  }
-}
-
-
-explore: pyg_advertising_investment {
-  join: smartieorders {
-    type: left_outer
-    relationship: many_to_one
-    sql_on: ${pyg_advertising_investment.month} = ${smartieorders.month};;
   }
 }
