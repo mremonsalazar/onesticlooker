@@ -20,7 +20,7 @@ view: pyg_advertising_investment {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_advertising_investment {
+  measure: sum_advertising_investment {
     type: sum
     sql: ${advertising_investment} ;;
   }
