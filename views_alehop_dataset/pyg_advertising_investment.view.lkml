@@ -22,7 +22,7 @@ view: pyg_advertising_investment {
 
   measure: total_advertising_investment {
     type: sum
-    sql: ${advertising_investment} ;;
+    sql: ${advertising_investment}/1000 ;;
   }
 
   measure: average_advertising_investment {
