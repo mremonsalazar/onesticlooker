@@ -40,6 +40,8 @@ explore: sin_stock_mas_vendidos {}
 explore: top_prodcutos_unidades_no_vendidos {}
 explore: coste_ventas {}
 explore: advertising_investment_with_purchases {}
+explore: embudo_compras {}
+explore: tipo_eventos_embudo {}
 #explore: daily_revenue {}
 
 
