@@ -31,12 +31,12 @@ view: pyg_advertising_investment {
   }
 
   dimension: month {
-    type: number
+    type: date
     sql: ${TABLE}.month ;;
   }
 
   dimension: year {
-    type: number
+    type: date
     sql: ${TABLE}.year ;;
   }
 
@@ -44,4 +44,18 @@ view: pyg_advertising_investment {
     type: count
     drill_fields: []
   }
+
+  dimension: date {
+    hidden: yes
+    type: string
+    sql: PARSE_DATE('%Y%m', CONCAT(${TABLE}.year, ${TABLE}.month)) ;;
+  }
+
+  dimension_group: event_date_group {
+    type: time
+    timeframes: [date, month, month_num, year]
+    datatype: date
+    sql: ${date} ;;
+  }
+
 }
