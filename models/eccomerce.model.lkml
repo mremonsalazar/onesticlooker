@@ -39,6 +39,7 @@ explore: poco_stock_muchas_visitas {}
 explore: sin_stock_mas_vendidos {}
 explore: top_prodcutos_unidades_no_vendidos {}
 explore: coste_ventas {}
+explore: advertising_investment_with_purchases {}
 #explore: daily_revenue {}
 
 
