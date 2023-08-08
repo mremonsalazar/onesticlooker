@@ -42,6 +42,7 @@ explore: coste_ventas {}
 explore: advertising_investment_with_purchases {}
 explore: embudo_compras {}
 explore: tipo_eventos_embudo {}
+explore: cesta_media {}
 #explore: daily_revenue {}
 
 
