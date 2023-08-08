@@ -57,5 +57,9 @@ view: pyg_advertising_investment {
     datatype: date
     sql: ${date} ;;
   }
-
+  dimension: month_group {
+    type: date
+    primary_key: yes
+    sql: ${event_date_group_month} ;;
+  }
 }

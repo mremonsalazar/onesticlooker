@@ -107,6 +107,6 @@ explore: pyg_advertising_investment {
   join: smartieorders {
     type: left_outer
     relationship: many_to_many
-    sql_on: ${smartieorders.created_month} = ${pyg_advertising_investment.event_date_group_month};;
+    sql_on: ${smartieorders.created_month} = ${pyg_advertising_investment.month_group};;
   }
 }
