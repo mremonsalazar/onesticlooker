@@ -43,6 +43,8 @@ explore: advertising_investment_with_purchases {}
 explore: embudo_compras {}
 explore: tipo_eventos_embudo {}
 explore: cesta_media {}
+explore: estado_del_dia {}
+explore: estado_del_mes {}
 #explore: daily_revenue {}
 
 
