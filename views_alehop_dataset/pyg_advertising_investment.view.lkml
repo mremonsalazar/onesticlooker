@@ -65,9 +65,4 @@ view: pyg_advertising_investment {
     primary_key: yes
     sql: ${event_date_group_month} ;;
   }
-
-  measure: return_of_investment {
-    type: number
-    sql: ${sum_advertising_investment} ;;
-  }
 }
