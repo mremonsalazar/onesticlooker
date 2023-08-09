@@ -45,6 +45,8 @@ explore: tipo_eventos_embudo {}
 explore: cesta_media {}
 explore: estado_del_dia {}
 explore: estado_del_mes {}
+explore: coste_ventas_alehop3 {}
+explore: gross_margin_alehop3 {}
 #explore: daily_revenue {}
 
 

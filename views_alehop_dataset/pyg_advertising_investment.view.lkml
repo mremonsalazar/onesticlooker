@@ -1,3 +1,5 @@
+include: "/views_alehop_dataset/**/smartieorders.view"
+
 # The name of this view in Looker is "Pyg Advertising Investment"
 view: pyg_advertising_investment {
   # The sql_table_name parameter indicates the underlying database table
@@ -57,9 +59,15 @@ view: pyg_advertising_investment {
     datatype: date
     sql: ${date} ;;
   }
+
   dimension: month_group {
-    type: date
+    type: string
     primary_key: yes
     sql: ${event_date_group_month} ;;
+  }
+
+  measure: return_of_investment {
+    type: number
+    sql: ${sum_advertising_investment} ;;
   }
 }

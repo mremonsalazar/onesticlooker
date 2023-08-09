@@ -1,3 +1,5 @@
+include: "/views_alehop_dataset/**/pyg_advertising_investment.view"
+
 # The name of this view in Looker is "Smartieorders"
 view: smartieorders {
   # The sql_table_name parameter indicates the underlying database table
