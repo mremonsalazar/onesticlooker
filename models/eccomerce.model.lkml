@@ -48,7 +48,8 @@ explore: estado_del_mes {}
 explore: coste_ventas_alehop3 {}
 explore: gross_margin_alehop3 {}
 #explore: daily_revenue {}
-
+explore: pyg {}
+explore: pyg_demo01_test {}
 
 explore: events {
   hidden: no
