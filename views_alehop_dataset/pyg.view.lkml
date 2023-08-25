@@ -2,7 +2,7 @@
 view: pyg {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `alehop_dataset.pyg`
+  sql_table_name: CONCAT({{_user_attributes['table_name']}}, `_dataset.pyg`)
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
