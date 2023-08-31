@@ -2,7 +2,7 @@
 view: pyg_demo01_test {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `gke-for-ops.demo01_dataset.pyg` ;;
+  sql_table_name:  `gke-for-ops.{{ _user_attributes['table_name'] }}_dataset.pyg`;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -33,6 +33,7 @@ view: pyg_demo01_test {
   measure: total_cost_of_sales {
     type: sum
     sql: ${cost_of_sales} ;;  }
+
   measure: average_cost_of_sales {
     type: average
     sql: ${cost_of_sales} ;;  }

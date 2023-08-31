@@ -2,7 +2,7 @@
 view: smartie_stocks {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `gke-for-ops.alehop_dataset.smartie_stocks` ;;
+  sql_table_name: `gke-for-ops.{{ _user_attributes['table_name'] }}_dataset.smartie_stocks` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
