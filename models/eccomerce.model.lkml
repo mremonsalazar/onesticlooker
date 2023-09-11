@@ -20,7 +20,7 @@ include: "/alehop_merchant_center/**/products_670518068.view"
 explore: smartieorders {}
 explore: smartie_stocks {}
 #explore: pyg_advertising_investment {}
-explore: pygsalestarget {}
+#explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
 explore: sum_without_tax_by_day {}
 explore: count_shipping_address_email {}
@@ -112,4 +112,13 @@ explore: pyg_advertising_investment {
     relationship: many_to_many
     sql_on: ${smartieorders.created_month} = ${pyg_advertising_investment.month_group};;
   }
+}
+
+
+explore: pygsalestarget {
+  join: smartieorders {
+    relationship: many_to_many
+    sql_on: 1 = 1 ;; # this sql_on condition is required in some dialects,
+    type: cross      # but causes problems in other dialects, try adding or
+  }                  # removing if you experience problems with cross joins
 }
