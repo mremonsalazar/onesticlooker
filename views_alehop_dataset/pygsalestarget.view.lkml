@@ -30,6 +30,14 @@ view: pygsalestarget {
     sql: ${month} ;;
   }
 
+  dimension: days_in_current_month {
+    type: number
+    sql:DATE_DIFF(
+          DATE_ADD(DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH), INTERVAL 1 MONTH),
+          DATE_TRUNC(DATE(current_datetime('Europe/Madrid')), MONTH),
+          DAY) ;;
+  }
+
   dimension: sales_target {
     type: number
     sql: ${TABLE}.sales_target ;;
