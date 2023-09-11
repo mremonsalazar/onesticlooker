@@ -225,6 +225,16 @@ view: smartieorders {
     sql: ${TABLE}.total_without_tax ;;
   }
 
+  dimension: created_day_higher_than {
+    type: date
+    sql: TIMESTAMP(datetime_trunc(current_datetime('Europe/Madrid'), MONTH), 'Europe/Madrid') ;;
+  }
+
+  dimension: created_day_lower_than {
+    type: date
+    sql: TIMESTAMP(datetime_trunc(datetime_add(current_datetime('Europe/Madrid'), INTERVAL 1 MONTH), MONTH), 'Europe/Madrid') ;;
+  }
+
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
