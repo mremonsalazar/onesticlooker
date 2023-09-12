@@ -18,7 +18,6 @@ include: "/alehop_merchant_center/**/products_670518068.view"
 #}
 
 explore: smartieorders {}
-explore: smartie_stocks {}
 #explore: pyg_advertising_investment {}
 #explore: pygsalestarget {}
 explore: sum_quantity_orderlines {}
@@ -121,4 +120,17 @@ explore: pygsalestarget {
     sql_on: 1 = 1 ;; # this sql_on condition is required in some dialects,
     type: cross      # but causes problems in other dialects, try adding or
   }                  # removing if you experience problems with cross joins
+}
+
+explore: smartie_stocks {
+  join: events_items {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${events_items.item_id} = ${smartie_stocks.product_sku};;
+  }
+  join: products_670518068 {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${products_670518068.offer_id} = ${smartie_stocks.product_sku};;
+  }
 }
