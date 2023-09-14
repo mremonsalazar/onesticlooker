@@ -656,9 +656,11 @@ view: events_items {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
+
   measure: total_item_revenue {
     type: sum
     sql: ${item_revenue} ;;  }
+
   measure: average_item_revenue {
     type: average
     sql: ${item_revenue} ;;  }
@@ -774,6 +776,11 @@ view: events_event_params {
   measure: count_strvalue {
     type: count_distinct
     sql: ${value__string_value} ;;
+  }
+
+  measure: count_session_id {
+    type: count_distinct
+    sql: ${value__int_value} ;;
   }
 
   measure: count {

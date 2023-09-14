@@ -268,6 +268,16 @@ view: smartieorders {
     drill_fields: []
   }
 
+  #measure: count_shipping_address_email {
+  #  type: count_distinct
+  #  sql: ${shipping_address_email} ;;
+  #}
+
+  #measure: avg_count_shipping_address_email {
+  #  type: average
+  #  sql: ${avg_count_shipping_address_email} ;;
+  #}
+
   measure: sum_without_tax {
     type: sum
     sql: ROUND(${total_without_tax}, 2) ;;
