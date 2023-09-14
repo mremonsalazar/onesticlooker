@@ -28,10 +28,13 @@ view: smartie_stocks {
 
   measure: total_product_sku {
     type: sum
-    sql: ${product_sku} ;;  }
+    sql: ${product_sku} ;;
+  }
+
   measure: average_product_sku {
     type: average
-    sql: ${product_sku} ;;  }
+    sql: ${product_sku} ;;
+  }
 
   dimension: quantity {
     type: number
